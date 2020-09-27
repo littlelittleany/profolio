@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <title>profolio.annywu</title>
+
+
+<style>
+    p {text-align: center; font-family: fantasy; font-size: 22px;} /*to make all the text under same style*/
+
+    body{
+        justify-content: center;   
+        background-color: black;
+        background-size: cover;
+        
+    }
+
+/*ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇSUB MENU DO NOT TOUCH!!!!ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ*/ 
+    .item{
+        position: relative;
+        margin-top: px;
+        font-size: 20px;
+        color: white !important ;
+    }
+
+    .my-menu {
+        margin-top: 0% !important;
+        background-color:rgba(0, 0, 0, 0.3) !important;
+    }
+/*^^^^^^^^^^^^^SUB MENU DO NOT TOUCH!!!!^^^^^^^^^^^^^^^^^^^^^*/ 
+
+    .text p {
+         font-family: fantasy;
+         margin: 10px 0 5px 0;
+    }
+
+    /*PROFOLIO PHOTOS START HEREEEEEE*/
+
+    .photo {
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: 70%;
+        position: relative;
+        display: block;
+        margin-top: 40px;
+        margin-bottom: 10px;
+
+    }
+
+
+
+/* PHOTOS here ^^^^^^^^^^^^^^^^^^^^^^^^^
+xxx
+xxx
+ ---ˇˇˇˇˇˇˇˇˇˇ--ZOOM IN FEATURE--ˇˇˇˇˇˇˇ---- */
+    .ph :hover {
+            transform: scale(2.0);
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="background"></div>
+
+
+    <nav class= "ui two item menu my-menu">
+         <a class= "item" href ="index.html"> MAIN PAGE </a>
+         <a class= "item" href ="photo.html"> PHOTOGRAPHY </a>
+    </nav>
+    
+
+    <div class="canvas">
+
+        <div class="myPhoto">
+            <img src ="img/photo/photo1.jpg" id ="ph "class="photo">
+            <p style="color: white";> Hi this is my babe </p>
+        </div>
+        <div class="myPhoto">
+            <img src ="img/photo/photo2.jpg" id ="ph" class="photo">
+            <p style="color: white";> and this is me  </p>
+        </div>
+        <div class="myPhoto">
+            <img src ="img/photo/photo3.jpg" id= "ph" class="photo"> 
+            <p style="color: white";> my babe again! OMG he is so adorable$%^&*(*&$</p>
+        </div>
+
+            <img src ="img/photo/photo4.jpg" id= "ph" class="photo"> 
+            <img src ="img/photo/photo5.png" id= "ph" class="photo"> 
+            <span calss ="close">x</span>
+
+    </div>
+    <div class="caption"></div>
+
+<script>
+
+    const items = document.querySelectorAll('.myPhoto');
+    items.forEach(myPhoto => myPhoto.addEventListener('click', (e) => { 
+    let class_name = e.target.parentElement.className;
+    const large = class_name.includes('large');
+    if(!large){
+        e.target.parentElement.className+='large'
+    } else {
+             e.target.parentElement.className='myPhoto'
+    }
+}));
+
+/* ^^function onclick:         ^^
+    const myPhoto = document.querySelector ('img');
+    myPhoto.onclick = function() {
+        //this is to call the function
+    }
+*/
+</script>
+
+
+
+</body>
+</html>
